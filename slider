@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <style>
+      body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+}
+.content{
+  height: 270px;
+  width: 480px;
+  overflow: hidden;
+}
+.content .images{
+  height: 100%;
+  width: 100%;
+}
+.images img{
+  height: 100%;
+  width: 100%;
+}
+</style>
+   </head>
+   <body>
+      <div class="content">
+         <div class="images">
+            <a href="https://www.youtube.com/watch?v=o96CUytXt6k"><img src="https://i.ytimg.com/vi/o96CUytXt6k/maxresdefault.jpg"></a>
+            <img src="https://i.ytimg.com/vi/1qQAoD_ip2A/maxresdefault.jpg">
+            <img src="https://drive.google.com/uc?id=1HiZjMK6lINng6gz-0e1xvziklpIVKLwL">
+         </div>
+      </div>
+      <script>
+         var indexValue = 0;
+         function slideShow(){
+           setTimeout(slideShow, 7000);
+           var x;
+           const img = document.querySelectorAll("img");
+           for(x = 0; x < img.length; x++){
+             img[x].style.display = "none";
+           }
+           indexValue++;
+           if(indexValue > img.length){indexValue = 1}
+           img[indexValue -1].style.display = "block";
+         }
+         slideShow();
+      </script>
+   </body>
+</html>
